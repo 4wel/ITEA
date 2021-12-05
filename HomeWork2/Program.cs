@@ -144,13 +144,13 @@ namespace HomeWork2
 
         static void Main(string[] args)
         {
-            //Console.WriteLine("Task 1");
-            //Console.Write("Enter A value: ");
-            //double a = double.Parse(Console.ReadLine());
-            //Console.Write("Enter B value: ");
-            //double b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Task 1");
+            Console.Write("Enter A value: ");
+            double a = double.Parse(Console.ReadLine());
+            Console.Write("Enter B value: ");
+            double b = double.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Task 1 result is " + Task1(a, b));
+            Console.WriteLine("Task 1 result is " + Task1(a, b));
 
             //Console.WriteLine("Task 2");
             //Console.Write("Enter X value: ");
@@ -196,18 +196,18 @@ namespace HomeWork2
             //else if (result.d == 0)
             //{
             //    Console.WriteLine("x = " + result.x1);
-               
+
             //}
             //else
             //{
             //    Console.WriteLine("Quadratic equation has no solution");
             //}
 
-            Console.WriteLine("Task 4");
-            Console.Write("Enter two-digit number: ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            string s = Task5(a);
-            Console.WriteLine($"number A in words is {s}");
+            //Console.WriteLine("Task 4");
+            //Console.Write("Enter two-digit number: ");
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //string s = Task5(a);
+            //Console.WriteLine($"number A in words is {s}");
         }
     }
 }
