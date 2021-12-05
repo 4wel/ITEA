@@ -43,7 +43,10 @@ namespace HomeWork2
             {
                 quadrant = 4;
             }
-            else quadrant = 0;
+            else
+            {
+                quadrant = 0;
+            }
 
             return quadrant;
         }
@@ -98,42 +101,42 @@ namespace HomeWork2
             { 
             switch (a)
                 { 
-                    case 10: result += " десять"; break;
-                    case 11: result += " одиннадцать"; break;
-                    case 12: result += " двенадцать"; break;
-                    case 13: result += " тринадцать"; break;
-                    case 14: result += " четырнадцать"; break;
-                    case 15: result += " пятнадцать"; break;
-                    case 16: result += " шестнадцать"; break;
-                    case 17: result += " семнадцать"; break;
-                    case 18: result += " восемннадцать"; break;
-                    case 19: result += " девятнадцать"; break;
+                    case 10: result += "ten"; break;
+                    case 11: result += "eleven"; break;
+                    case 12: result += "twelve"; break;
+                    case 13: result += "thirteen"; break;
+                    case 14: result += "fourteen"; break;
+                    case 15: result += "fifteen"; break;
+                    case 16: result += "sixteen"; break;
+                    case 17: result += "seventeen"; break;
+                    case 18: result += "eighteen"; break;
+                    case 19: result += "nineteen"; break;
                   }
             }
             else
             { 
                 switch ((int)s1) 
                 {
-                    case 50: result = " двадцать"; break;
-                    case 51: result = " тридцать"; break;
-                    case 52: result = " сорок"; break;
-                    case 53: result = " пятьдесят"; break;
-                    case 54: result = " шестьдесят"; break;
-                    case 55: result = " семьдесят"; break;
-                    case 56: result = " восемьдесят"; break;
-                    case 57: result = " девяносто"; break;
+                    case 50: result = "twenty"; break;
+                    case 51: result = "thirty"; break;
+                    case 52: result = "forty"; break;
+                    case 53: result = "fifty"; break;
+                    case 54: result = "sixty"; break;
+                    case 55: result = "seventy"; break;
+                    case 56: result = "eighty"; break;
+                    case 57: result = "ninety"; break;
                 }
 
                 switch ((int)s2)
                 {
-                    case 50: result += " двадцать"; break;
-                    case 51: result += " три"; break;
-                    case 52: result += " четыре"; break;
-                    case 53: result += " пять"; break;
-                    case 54: result += " шесть"; break;
-                    case 55: result += " семь"; break;
-                    case 56: result += " восемь"; break;
-                    case 57: result += " девять"; break;
+                    case 50: result += " two"; break;
+                    case 51: result += " three"; break;
+                    case 52: result += " four"; break;
+                    case 53: result += " five"; break;
+                    case 54: result += " six"; break;
+                    case 55: result += " seven"; break;
+                    case 56: result += " eight"; break;
+                    case 57: result += " nine"; break;
                 }
             }
 
