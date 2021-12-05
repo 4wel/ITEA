@@ -98,16 +98,16 @@ namespace HomeWork2
             { 
             switch (a)
                 { 
-                     case 10: result += " десять"; break;
-                     case 11: result += " одиннадцать"; break;
-                     case 12: result += " двенадцать"; break;
-                     case 13: result += " тринадцать"; break;
-                     case 14: result += " четырнадцать"; break;
-                     case 15: result += " пятнадцать"; break;
-                     case 16: result += " шестнадцать"; break;
-                     case 17: result += " семнадцать"; break;
-                     case 18: result += " восемннадцать"; break;
-                     case 19: result += " девятнадцать"; break;
+                    case 10: result += " десять"; break;
+                    case 11: result += " одиннадцать"; break;
+                    case 12: result += " двенадцать"; break;
+                    case 13: result += " тринадцать"; break;
+                    case 14: result += " четырнадцать"; break;
+                    case 15: result += " пятнадцать"; break;
+                    case 16: result += " шестнадцать"; break;
+                    case 17: result += " семнадцать"; break;
+                    case 18: result += " восемннадцать"; break;
+                    case 19: result += " девятнадцать"; break;
                   }
             }
             else
@@ -140,8 +140,6 @@ namespace HomeWork2
             return result;
         }
 
-
-
         static void Main(string[] args)
         {
             Console.WriteLine("Task 1");
@@ -150,7 +148,8 @@ namespace HomeWork2
             Console.Write("Enter B value: ");
             double b = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Task 1 result is " + Task1(a, b));
+            //Console.WriteLine("Task 1 result is " + Task1(a, b));
+
 
             //Console.WriteLine("Task 2");
             //Console.Write("Enter X value: ");
@@ -168,6 +167,7 @@ namespace HomeWork2
             //    Console.WriteLine("Point is not in quadrants"); 
             //}
 
+
             //Console.WriteLine("Task 3");
             //Console.Write("Enter A value: ");
             //double a = double.Parse(Console.ReadLine());
@@ -178,6 +178,7 @@ namespace HomeWork2
 
             //Task3(ref a, ref b, ref c);
             //Console.WriteLine($"Now A = {a} B = {b} C =  {c}");
+
 
             //Console.WriteLine("Task 4");
             //Console.Write("Enter A value: ");
@@ -203,7 +204,8 @@ namespace HomeWork2
             //    Console.WriteLine("Quadratic equation has no solution");
             //}
 
-            //Console.WriteLine("Task 4");
+
+            //Console.WriteLine("Task 5");
             //Console.Write("Enter two-digit number: ");
             //int a = Convert.ToInt32(Console.ReadLine());
             //string s = Task5(a);
