@@ -192,7 +192,6 @@ namespace HomeWork3
             for (int i = 1; i <= n; i++)
             {
                 (int countEven, int countOdd) = Task9CountEvenOdd(i);
-               
                 if (countEven > countOdd)
                 {
                     count++;
@@ -224,7 +223,6 @@ namespace HomeWork3
                         break;
                     }
                 }
-
             }
 
             return result;
@@ -232,8 +230,6 @@ namespace HomeWork3
 
         static void Main(string[] args)
         {
-
-
         }
     }
 }
