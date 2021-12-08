@@ -4,52 +4,76 @@ namespace HomeWork3
 {
     class Program
     {
-        static int Task1(int a, int b)
+        static double Task1(int a, int b)
         {
-            int result = a;
-            for (int i = 1; i < b; i++)
+            double result = a;
+            
+            if (b > 0)
             {
-                result *= a;
+                for (int i = 1; i < b; i++)
+                {
+                    result *= a;
+                }
+            }
+            else if (b < 0)
+            {
+                for (int i = 1; i < -1 * b; i++)
+                {
+                    result *= a;
+                }
+                result = (double)(1 / result);
+            }
+            else
+            {
+                result = 1;
             }
 
             return result;
         }
 
-        static void Task2(int a)
+        static int[] Task2(int a)
         {
+            int[] arr = {};
+            int num = 0;
+
             for (int i = 1; i <= 1000; i++)
             {
                 if (i % a == 0)
-                { 
-                    Console.WriteLine(i); 
+                {
+                    Array.Resize(ref arr, arr.Length + 1);
+                    arr[num] = i;
+                    num++;
                 }
             }
+
+            return arr;
         }
 
         static int Task3(int a)
         {
-            int i = 1;
-         
-            while (i * i < a)
+            int result = 0;
+            for (int i = 1; i < a; i++)
             {
-                i++;
+                if (i * i < a)
+                {
+                    result++;
+                }
             }
 
-            return i-1;
+            return result;
         }
 
         static int Task4(int a)
         {
             int divisor = 0;
-            int i = 1;
 
-            while (i < a)
+            for (int i = a-1; i > 0; i--)
             {
-                if (a % i == 0) 
+                if (a % i == 0)
                 {
                     divisor = i;
-                } 
-                i++;
+                    break;
+                }
             }
 
             return divisor;
@@ -71,7 +95,6 @@ namespace HomeWork3
                 Swap(ref a, ref b);
             }
             for (int i = a; i <= b; i++)
-
             {
                 if (i % 7 == 0)
                 {
@@ -88,14 +111,15 @@ namespace HomeWork3
             long lastValue = 0;
             long newValue = 1;
 
-            for (int i = 1; i <= n; i++ )
+            for (int i = 0; i < n; i++)
             {
                 long prevValue = lastValue;
                 lastValue = newValue;
                 newValue = prevValue + newValue;
+                Console.WriteLine(i + " = " + newValue);
             }
 
-            return lastValue;
+            return newValue;
         }
 
         static int Task7(int a, int b)
@@ -230,6 +254,10 @@ namespace HomeWork3
 
         static void Main(string[] args)
         {
+            Console.WriteLine(Task6(7));
+            // Console.WriteLine(Task(0,0));
+            // Console.WriteLine("[{0}]", string.Join(", ", Task2(7)));
+
         }
     }
 }
