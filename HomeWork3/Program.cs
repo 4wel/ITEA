@@ -67,7 +67,7 @@ namespace HomeWork3
         {
             int divisor = 0;
 
-            for (int i = a-1; i > 0; i--)
+            for (int i = a - 1; i > 0; i--)
             {
                 if (a % i == 0)
                 {
@@ -100,6 +100,7 @@ namespace HomeWork3
                 {
                     sum += i;
                 }
+
                 i++;
             }
 
@@ -116,7 +117,6 @@ namespace HomeWork3
                 long prevValue = lastValue;
                 lastValue = newValue;
                 newValue = prevValue + newValue;
-                Console.WriteLine(i + " = " + newValue);
             }
 
             return newValue;
@@ -164,6 +164,7 @@ namespace HomeWork3
                     break;
                 }
             }
+
             return x;
         }
 
