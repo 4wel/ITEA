@@ -71,7 +71,7 @@ namespace HomeWork4
         static int SumOddIndexElements(int[] array)
         {
             int sum = 0;
-            
+
             for (int i = 1; i < array.Length; i+=2)
             {
                 sum += array[i];
@@ -129,7 +129,6 @@ namespace HomeWork4
                     newArray[lenght / 2] = array[lenght / 2];
                 }
             }
-
 
             array = newArray;
         }
