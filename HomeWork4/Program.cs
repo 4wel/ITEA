@@ -112,9 +112,7 @@ namespace HomeWork4
         {
             int lenght = array.Length;
             int[] newArray = new int[lenght];
-            int shift = 0;
-
-            shift = lenght % 2 == 0 ? 0 : 1;
+            int shift = lenght % 2 == 0 ? 0 : 1;
 
             for (int i = 0; i < lenght; i++)
             {
