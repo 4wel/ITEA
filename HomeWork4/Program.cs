@@ -110,27 +110,10 @@ namespace HomeWork4
 
         static void HalfSwapArray(ref int[] array)
         {
-            int lenght = array.Length;
-            int[] newArray = new int[lenght];
-            int shift = lenght % 2 == 0 ? 0 : 1;
-
-            for (int i = 0; i < lenght; i++)
+            for (int i = 0; i < array.Length / 2; i++)
             {
-                if (i < lenght / 2)
-                {
-                    newArray[i + lenght / 2 + shift] = array[i];
-                }    
-                else if (i != lenght / 2 || shift == 0)
-                {
-                    newArray[i - lenght / 2 - shift] = array[i];
-                }
-                else
-                {
-                    newArray[lenght / 2] = array[lenght / 2];
-                }
+                Swap(ref array[i], ref array[array.Length - array.Length / 2 + i]);
             }
-
-            array = newArray;
         }
 
         static void SelectionSortArrayAsc(ref int[] array)
@@ -181,7 +164,7 @@ namespace HomeWork4
 
         static void Main(string[] args)
         {
-            int N = 9;
+            int N = 7;
             int[] array = new int[N];
             Random random = new Random();
             for (int i = 0; i < array.Length; i++)
