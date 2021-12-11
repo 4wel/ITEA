@@ -131,28 +131,7 @@ namespace HomeWork4
                 array = newArray;
         }
 
-        static void SortArrayLineAsc(ref int[] array)
-        {
-            int lenght = array.Length;
-            int min = 0;
-
-            for (int i = 0; i < lenght; i++)
-            {
-                min = i;
-
-                for (int j = i + 1; j < lenght; j++)
-                {
-                    if (array[min] > array[j])
-                    {
-                        min = j;
-                    }
-                }
-
-                Swap(ref array[i], ref array[min]);
-            }
-        }
-
-        static void SelectionSortArrayDesc(ref int[] array)
+        static void SelectionSortArrayAsc(ref int[] array)
         {
             int min = 0;
 
@@ -214,7 +193,7 @@ namespace HomeWork4
             }
 
             Console.WriteLine();
-            
+
             HalfSwapArray(ref array);
 
             for (int i = 0; i < array.Length; i++)
