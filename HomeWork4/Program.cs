@@ -116,19 +116,24 @@ namespace HomeWork4
 
             shift = lenght % 2 == 0 ? 0 : 1;
 
-            for (int i = 0; i < lenght / 2 ; i++)
+            for (int i = 0; i < lenght; i++)
             {
-                newArray[i + lenght / 2 + shift] = array[i];
+                if (i < lenght / 2)
+                {
+                    newArray[i + lenght / 2 + shift] = array[i];
+                }    
+                else if (i != lenght / 2 || shift == 0)
+                {
+                    newArray[i - lenght / 2 - shift] = array[i];
+                }
+                else
+                {
+                    newArray[lenght / 2] = array[lenght / 2];
+                }
             }
-            for (int i = lenght / 2 + shift; i < lenght ; i++)
-            {
-                newArray[i - lenght / 2 - shift] = array[i];
-            }
-            if (shift == 1)
-            {
-                newArray[lenght / 2] = array[lenght / 2 ];
-            }
-                array = newArray;
+
+
+            array = newArray;
         }
 
         static void SelectionSortArrayAsc(ref int[] array)
@@ -179,7 +184,7 @@ namespace HomeWork4
 
         static void Main(string[] args)
         {
-            int N = 10;
+            int N = 9;
             int[] array = new int[N];
             Random random = new Random();
             for (int i = 0; i < array.Length; i++)
