@@ -6,37 +6,20 @@ namespace HomeWork5
     {
         static int MinElement(int[,] arr)
         {
-            int result = arr[0,0];
+            (int i, int j) = MinElementIndex(arr);
 
-            foreach (var item in arr)
-            {
-                if (item < result)
-                {
-                    result = item;
-                }
-            }
-
-            return result;
+            return arr[i, j];
         }
 
         static int MaxElement(int[,] arr)
         {
-            int result = arr[0, 0];
+            (int i, int j) = MaxElementIndex(arr);
 
-            foreach (var item in arr)
-            {
-                if (item > result)
-                {
-                    result = item;
-                }
-            }
-
-            return result;
+            return arr[i, j];
         }
 
         static (int iMin, int jMin) MinElementIndex(int[,] arr)
         {
-            int minElement = arr[0, 0];
             int iMin = 0;
             int jMin = 0;
 
@@ -44,12 +27,10 @@ namespace HomeWork5
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    if (arr[i, j] < minElement)
+                    if (arr[i, j] < arr[iMin, jMin])
                     {
-                        minElement = arr[i, j];
                         iMin = i;
                         jMin = j;
-
                     }
                 }
             }
@@ -59,7 +40,6 @@ namespace HomeWork5
 
         static (int iMax, int jMax) MaxElementIndex(int[,] arr)
         {
-            int maxElement = arr[0, 0];
             int iMax = 0;
             int jMax = 0;
 
@@ -67,9 +47,8 @@ namespace HomeWork5
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    if (arr[i, j] > maxElement)
+                    if (arr[i, j] > arr[iMax, jMax])
                     {
-                        maxElement = arr[i, j];
                         iMax = i;
                         jMax = j;
                     }
@@ -118,32 +97,34 @@ namespace HomeWork5
                 }
             }
         }
+
         static void Swap(ref int a, ref int b)
         {
             int temp = a;
             a = b;
             b = temp;
         }
+
         static void Main(string[] args)
         {
             int[,] arr = new int[5, 5];
             Random random = new Random();
 
-            //for (int i = 0; i < arr.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < arr.GetLength(1); j++)
-            //    {
-            //       arr[i,j] = random.Next(0, 100);
-            //    }
-            //}
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    arr[i, j] = random.Next(0, 100);
+                }
+            }
 
-            //Console.WriteLine(MinElement(arr));
-            //Console.WriteLine(MaxElement(arr));
-            //Console.WriteLine(MinElementIndex(arr));
-            //Console.WriteLine(MaxElementIndex(arr));
-            //Console.WriteLine(MoreThanAdjacentElementsCount(arr));
+            Console.WriteLine(MinElement(arr));
+            Console.WriteLine(MaxElement(arr));
+            Console.WriteLine(MinElementIndex(arr));
+            Console.WriteLine(MaxElementIndex(arr));
+            Console.WriteLine(MoreThanAdjacentElementsCount(arr));
 
-            //Console.WriteLine();
+            Console.WriteLine();
 
             //for (int i = 0; i < arr.GetLength(0); i++)
             //{
@@ -154,7 +135,7 @@ namespace HomeWork5
 
             //    Console.WriteLine();
             //}
-          
+
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
